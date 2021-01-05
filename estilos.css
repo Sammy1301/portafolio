@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Libre+Baskerville&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.principal{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 450px;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+.texto{
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+span a{
+    font-size: xx-large;
+    color: #fff;
+    transition: font-size 0.3s;
+}
+span a:hover{
+    color: #fff;
+    font-size: 50px;
+}
+.contenedor{
+    margin: 0 auto;
+
+}
+.yo{
+    width: 150px;
+    animation: fadeInDown;
+    animation-duration: 1s;
+}
+h1{
+    font-family: 'Do Hyeon', sans-serif;
+}
+.card{
+    
+    float: left;
+}
+.sobre-mi{
+    display: flex;
+    flex-direction: row-reverse;
+}
