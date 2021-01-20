@@ -1,31 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
 }
+/* #region Nav Bar*/
+.navi{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: background-color 0.5s;
+    padding: 10px;
+    z-index: 99;
+}
+.navi h2{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+}
+.navi li{
+    list-style: none;
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.navi a{
+    color: whitesmoke;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.navi a:hover{
+    text-shadow: whitesmoke 2px 0 15px;
+}
+.cont{
+    background-image: url("./imgs/fondo.jpg");
+    background-position: center;
+    background-size: cover;
+}
 
+/* #endregion */
+
+/* #region Banner*/
 .principal{
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 450px;
+    height: 550px;
     color: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 100px;
 }
-.texto{
+.texto-banner{
     animation: fadeInUp;
     animation-duration: 1s;
 }
 span a{
     font-size: xx-large;
     color: #fff;
-    transition: font-size 0.3s;
+    transition: text-shadow 0.3s;
 }
 span a:hover{
     color: #fff;
-    font-size: 50px;
+    text-shadow: #fff 0px 0px 25px;
+    animation-timing-function: ease-in;
+}
+/* #endregion */
+
+
+/* #region Quien Soy*/
+.sobre-mi{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
 }
 .contenedor{
     margin: 0 auto;
@@ -39,11 +93,57 @@ span a:hover{
 h1{
     font-family: 'Do Hyeon', sans-serif;
 }
-.card{
-    
-    float: left;
-}
-.sobre-mi{
+/* #endregion */
+
+/* #region TEGNOLOGIAS*/
+.tecnologias{
+    height: 1000px;
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
 }
+/* .tecnologias::after{
+    content: "";
+    clear: both;
+    display: table;
+} */
+.tecnologias .card{
+    width: 300px;
+    height: 460px;
+}
+img[alt="Card image"]{
+    height: 200px;
+    width: 180px;
+    
+}
+/* #endregion */
+
+
+/* #region PROYECTOS*/
+.card{
+    float: left;
+    height: 500px;
+    background-color: #cfcfcf;
+    padding-top: 5px;
+    margin: 2px;
+    width: 470px;
+    gap: 5px;
+    overflow-y: auto;
+}
+.card-img-top{
+    cursor: pointer;
+}
+.texto{
+    width: 500px;
+    font-size: x-large;
+}
+
+/* #endregion */
+section{
+    margin-bottom: 50px;
+}
+
+
+

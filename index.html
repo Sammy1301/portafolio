@@ -13,83 +13,166 @@
   />
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Portafolio</a>
-      
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre mi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tecnologias</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
       <main>
-          <div class="container-fluid principal">
+        <div class="cont">
+        <!-- NAVBAR -->
+        <div class="navi">
+          <h2>Portafolio</h2>
+            <div class="menu">
+            <ul>
+              <li><a href="#banner">Inicio</a></li>
+              <li><a href="#sobre-mi">Sobre mi</a></li>
+              <li><a href="#tecnologias">Tecnologias</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- BANNER -->
+          <div class="container-fluid principal" id="banner">
               <div class="imagen">
                 <img src="./imgs/yo.jpg" class="rounded-circle yo" alt="IMG">
               </div>
-              <div class="texto ">
-                <h1>Samuel Martinez</h1>
+              <div class="texto-banner ">
+                <h1 id="nombre">Samuel Martinez</h1>
                 <h3>Jr. Web developer</h3>
                 <span><a href="https://www.linkedin.com/in/samuel-martinez-b742811b4/" target="_blank"><i class="fab fa-linkedin"></i></a></span>
-
               </div>
           </div>
+        </div>
           <!-- SOBRE MI -->
           <section>
-              <div class="sobre-mi">
-                <div class="container-fluid">
-                    <div class="imagen">
-                      <img src="./imgs/3964906 (1).png" alt="IMG">
-                    </div>
-                    <div class="texto">
-                      <h1>Quien Soy</h1>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptatum quaerat magnam animi vel. Veritatis nisi saepe eveniet laboriosam reiciendis quod culpa voluptatem adipisci, illo ullam omnis vitae. Numquam, ipsam.</p>
-                    </div>
-                </div>
+              <div class="sobre-mi" id="sobre-mi">
+                  <div class="texto">
+                    <h1>Quien Soy</h1>
+                    <p>Soy un joven entuciasta de la tecnologia, con deseos de superacion, de aprender, entregado, responsable, que desea dar lo mejor de si cada que le den la oportunidad. Principalmente destaco mi amor por la rama del desarrollo web gracias a la cantidad de cosas podibles que se pueden hacer; Los recursos son basicamente ilimitados, el unico limite es tu imaginacion y siempre hay algo nuevo para aprender.</p><br>
+                    <h3>Idiomas</h3>
+                    <p><strong>Español:</strong> Nativo</p>
+                    <p><strong>Ingles:</strong> Intermedio</p>
+                  </div>
+                  <div class="imagen">
+                    <img src="./imgs/3964906 (1).png" alt="IMG">
+                  </div>
               </div>
           </section>
-
-          <!-- PROJECTOS -->
+          <!-- TECNOLOGIAS -->
           <section>
-            <div class="card mb-3 col-sm-4">
-                <img src="./imgs/snippet.PNG" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">App de Snippets</h5>
-                  <p class="card-text">Esta es una aplicacion Web desarrollada para uso personal destinada a guardar Partes de codigo que considero importantes, para luego consultar si necesito alguno de ellos.</p>
-                  <p class="card-text"><small class="text-muted">PHP | Vue.js | Mysql | Axios | Materialize</small></p>
+                  <br>
+                  <hr>
+                  <h2>Tegnologias</h2>
+                  <br>
+            <div class="tecnologias" id="tecnologias">
+                    
+                    <!-- HTML -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/html.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">HTML</h4>
+                        <p class="card-text">Es el lenguaje de etiqueta en el cual se estruturan las Webs, es basicamente el esqueleto de una pagina web</p>
+                        <a href="https://es.wikipedia.org/wiki/HTML" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- CSS -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/css.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">CSS</h4>
+                        <p class="card-text">Es el estilo de toda pagina web. si quieres darle belleza a tu pagina web, sin duda CSS es necesario.</p>
+                        <a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- JS -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/js.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">JavaScript</h4>
+                        <p class="card-text">Es uno de los lenguajes mas Usados del mundo, debido a que su uso en la web. Es casi imprescindible si queremos tener una web interactiva.</p>
+                        <a href="https://es.wikipedia.org/wiki/JavaScript" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- PHP -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/php.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">PHP</h4>
+                        <p class="card-text">Es un lenguaje de programacion que corre en el lado del servidor, sirve para conectar nuestras paginas con BD, hacerlas interactivas y mucho mas.</p>
+                        <a href="https://es.wikipedia.org/wiki/PHP" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- VUE -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/vue.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">Vue.Js</h4>
+                        <p class="card-text">Es un framework progresivo de JavaScript que ha tomado popularidad gracias a su facilidad de aprendizaje y ventajas que ofrece a la hora de desarrollar <b>Aplicaciones Web.</b></p>
+                        <a href="https://es.wikipedia.org/wiki/Vue.js" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- JQuery -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/jquery.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">JQuery</h4>
+                        <p class="card-text">Es una libreria de JavaScript Para hacer interfaces de usuarios mas intuitivas e interactivas de una manera sencilla y ordenada.</p>
+                        <a href="#" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- Bootstrap -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/bootstrap.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">Bootstrap</h4>
+                        <p class="card-text">Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.</p>
+                        <a href="#" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                    <!-- C# -->
+                    <div class="card">
+                      <img class="card-img-top" src="./imgs/csharp.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">C#</h4>
+                        <p class="card-text">Es un lenguaje de programacion desarrollado por microsoft para el desarrollo de aplicaciones de escritorio pero es utilizado en diversos campos como el desarrollo de videojuegos.</p>
+                        <a href="#" target="__blank" class="btn btn-primary">Saber mas</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+          </section>
+          <!-- PROYECTOS -->
+          <section>
+            
+            <div class="card mb-3 col-sm-4" id="proyectos">
+                  <a href="https://snippetssammy.000webhostapp.com/#/inicio" target="_blank" rel="noopener noreferrer"><img src="./imgs/snippet.PNG" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title">App de Snippets</h5>
+                      <p class="card-text">Esta es una aplicacion Web desarrollada para uso personal destinada a guardar Partes de codigo que considero importantes, para luego consultar si necesito alguno de ellos. Aun necesita mucho trabajo para perfeccionarla pero voy avanzando</p>
+                      <p class="card-text"><small class="text-muted">PHP | Vue.js | Mysql | Axios | Materialize | Webpack</small></p>
+                    </div>
                 </div>
-              </div>
-              <div class="card mb-3 col-sm-4">
-                <img src="./imgs/crud-index.PNG" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">CRUD PHP</h5>
-                  <p class="card-text">Esto es un ejemplo de utilizacion del CRUD en PHP. <br><br><br><br> </p>
-                  <p class="card-text"><small class="text-muted">PHP | Mysql | Bootstrap</small></p>
+                <div class="card mb-3 col-sm-4">
+                    <img src="./imgs/crud-index.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">CRUD PHP</h5>
+                      <p class="card-text">Esto es un ejemplo de utilizacion del CRUD en PHP. <br><br><br><br> </p>
+                      <p class="card-text"><small class="text-muted">HTML | PHP | Mysql | Bootstrap</small></p>
+                    </div>
                 </div>
-              </div>
-              <div class="card mb-3 col-sm-4">
-                <img src="./imgs/snippet.PNG" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">App de Snippets</h5>
-                  <p class="card-text">Esta es una aplicacion Web desarrollada para uso personal destinada a guardar Partes de codigo que considero importantes, para luego consultar si necesito alguno de ellos.</p>
-                  <p class="card-text"><small class="text-muted">PHP | Vue.js | Mysql | Axios | Materialize</small></p>
+                <div class="card mb-3 col-sm-4">
+                    <img src="./imgs/snippet.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pagina Web Centro de salud Dr Terrero</h5>
+                      <p class="card-text">Esta es la pagina del Centro de salud Dr Terrero &copy;, contiene informacion relevante sombre la empresa, servicios, horarios y mas sesiones de interes al usuario.</p>
+                      <p class="card-text"><small class="text-muted">HTML | CSS | Bootstrap</small></p>
+                    </div>
                 </div>
+                  <div class="card mb-3 col-sm-4">
+                    <img src="./imgs/curriculum1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Curriculum con HTML Y CSS</h5>
+                      <p class="card-text">Esta es una asignacion de la universidad la cual me toco elaborar, usamos ciertas pautas que el profesor nos dio y luego continué con mi imaginacion, y este fue el resultado final</p>
+                      <p class="card-text"><small class="text-muted">HTML | CSS</small></p>
+                    </div>
               </div>
           </section>
           
@@ -102,6 +185,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      
+      <script src="./app.js"></script>
 </body>
 </html>
