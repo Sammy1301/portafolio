@@ -18,6 +18,7 @@
         <!-- NAVBAR -->
         <div class="navi">
           <h2>Portafolio</h2>
+          <span class="algo"><i class="fas fa-caret-down" id="menubtn"></i></span>
             <div class="menu">
             <ul>
               <li><a href="#banner">Inicio</a></li>
@@ -41,11 +42,11 @@
           </div>
         </div>
           <!-- SOBRE MI -->
-          <section>
-              <div class="sobre-mi" id="sobre-mi">
+          <section id="sobre-mi">
+              <div class="sobre-mi">
                   <div class="texto">
-                    <h1>Quien Soy</h1>
-                    <p>Soy un joven entuciasta de la tecnologia, con deseos de superacion, de aprender, entregado, responsable, que desea dar lo mejor de si cada que le den la oportunidad. Principalmente destaco mi amor por la rama del desarrollo web gracias a la cantidad de cosas podibles que se pueden hacer; Los recursos son basicamente ilimitados, el unico limite es tu imaginacion y siempre hay algo nuevo para aprender.</p><br>
+                    <span><i class="fas fa-user-alt"></i><h1>Quien Soy</h1></span>
+                    <p>Soy un joven amante de la tecnologia, con deseos de superacion, de aprender, entregado, responsable, que desea dar lo mejor de si. Siempre estoy aprendiendo nuevas practicas y tecnologias que me ayuden a hacer mas completo mi stack de desarrollador web y siempre con estandares de calidad altos tanto en back-end como en UI/UX. Me gusta hacer mi trabajo muy bien, soy atento a los detalles, y no me gusta dejar nada incompleto. Considero que el UI y el UX juegan una parte fundamental en un sitio web para la captura de atencion de el usuario, pero tambien, de nada sirve tener una web muy bonita pero con tiempos de carga y consulta excesivamente largos; por eso siempre trato de optimizar tanto en el back-end como en fron-end para asi llevar una experiencia grata al usuario final.</p><br>
                     <h3>Idiomas</h3>
                     <p><strong>Español:</strong> Nativo</p>
                     <p><strong>Ingles:</strong> Intermedio</p>
@@ -56,94 +57,48 @@
               </div>
           </section>
           <!-- TECNOLOGIAS -->
-          <section>
+          <section id="tecnologias">    
+            <div class="container tecnologias">
                   <br>
-                  <hr>
-                  <h2>Tegnologias</h2>
                   <br>
-            <div class="tecnologias" id="tecnologias">
-                    
-                    <!-- HTML -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/html.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">HTML</h4>
-                        <p class="card-text">Es el lenguaje de etiqueta en el cual se estruturan las Webs, es basicamente el esqueleto de una pagina web</p>
-                        <a href="https://es.wikipedia.org/wiki/HTML" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- CSS -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/css.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">CSS</h4>
-                        <p class="card-text">Es el estilo de toda pagina web. si quieres darle belleza a tu pagina web, sin duda CSS es necesario.</p>
-                        <a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- JS -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/js.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">JavaScript</h4>
-                        <p class="card-text">Es uno de los lenguajes mas Usados del mundo, debido a que su uso en la web. Es casi imprescindible si queremos tener una web interactiva.</p>
-                        <a href="https://es.wikipedia.org/wiki/JavaScript" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- PHP -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/php.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">PHP</h4>
-                        <p class="card-text">Es un lenguaje de programacion que corre en el lado del servidor, sirve para conectar nuestras paginas con BD, hacerlas interactivas y mucho mas.</p>
-                        <a href="https://es.wikipedia.org/wiki/PHP" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- VUE -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/vue.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">Vue.Js</h4>
-                        <p class="card-text">Es un framework progresivo de JavaScript que ha tomado popularidad gracias a su facilidad de aprendizaje y ventajas que ofrece a la hora de desarrollar <b>Aplicaciones Web.</b></p>
-                        <a href="https://es.wikipedia.org/wiki/Vue.js" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- JQuery -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/jquery.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">JQuery</h4>
-                        <p class="card-text">Es una libreria de JavaScript Para hacer interfaces de usuarios mas intuitivas e interactivas de una manera sencilla y ordenada.</p>
-                        <a href="#" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- Bootstrap -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/bootstrap.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">Bootstrap</h4>
-                        <p class="card-text">Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.</p>
-                        <a href="#" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                    <!-- C# -->
-                    <div class="card">
-                      <img class="card-img-top" src="./imgs/csharp.png" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">C#</h4>
-                        <p class="card-text">Es un lenguaje de programacion desarrollado por microsoft para el desarrollo de aplicaciones de escritorio pero es utilizado en diversos campos como el desarrollo de videojuegos.</p>
-                        <a href="#" target="__blank" class="btn btn-primary">Saber mas</a>
-                      </div>
-                    </div>
-                  </div>
-                  
+                  <h2>Tecnologias</h2>
+                  <br>
+                    <ul class="list-group">
+                      <li class="list-group-item"><i class="fab fa-html5"></i>   HTML</li>
+                      <li class="list-group-item"><i class="fab fa-css3-alt"></i>   CSS</li>
+                      <li class="list-group-item"><i class="fab fa-js"></i>   JavaScript</li>
+                      <li class="list-group-item"><i class="fab fa-vuejs"></i>   Vue.js</li>
+                      <li class="list-group-item"><i class="fas fa-keyboard"></i>   jQuery</li>
+                      <li class="list-group-item"><i class="fab fa-bootstrap"></i>   Bootstrap</li>
+                      <li class="list-group-item"><i class="fab fa-php"></i>   PHP</li>
+                      <li class="list-group-item"><i class="fas fa-keyboard"></i>   C#</li>
+                      <li class="list-group-item"><i class="fab fa-java"></i>   Java</li>
+                      <li class="list-group-item"><i class="fas fa-database"></i>   Sql</li>
+                      <li class="list-group-item"><i class="fas fa-database"></i>   MySql</li>
+                    </ul>
+            </div>
+            <div class="container">
+              <br>
+              <h2>Tecnologias que deseo aprender</h2>
+              <ul class="list-group">
+                <li class="list-group-item"><i class="fab fa-node"></i>   Node Js</li>
+                <li class="list-group-item"><i class="fab fa-react"></i>   React Js</li>
+                <li class="list-group-item"><i class="fab fa-sass"></i>   Sass</li>
+                <li class="list-group-item"><i class="fas fa-keyboard"></i>   TypeScript</li>
+                <li class="list-group-item"><i class="fab fa-laravel"></i>   Laravel</li>
+              </ul>
             </div>
           </section>
           <!-- PROYECTOS -->
-          <section>
-            
-            <div class="card mb-3 col-sm-4" id="proyectos">
-                  <a href="https://snippetssammy.000webhostapp.com/#/inicio" target="_blank" rel="noopener noreferrer"><img src="./imgs/snippet.PNG" class="card-img-top" alt="..."></a>
+          <section id="proyectos">
+            <br>
+            <br>
+            <h2>Proyectos</h2>
+            <br>
+            <div class="card mb-3 col-sm-4">
+              <div class="div-imagen" style="background-image: url(./imgs/snippet.PNG);">
+                <div class="imagen-bk"> <a href="#"class="button">Galeria</a> <a href="https://snippetssammy.000webhostapp.com/#/inicio" target="_blank" class="button">Sitio Web</a> </div>
+                </div>
                     <div class="card-body">
                       <h5 class="card-title">App de Snippets</h5>
                       <p class="card-text">Esta es una aplicacion Web desarrollada para uso personal destinada a guardar Partes de codigo que considero importantes, para luego consultar si necesito alguno de ellos. Aun necesita mucho trabajo para perfeccionarla pero voy avanzando</p>
@@ -151,7 +106,9 @@
                     </div>
                 </div>
                 <div class="card mb-3 col-sm-4">
-                    <img src="./imgs/crud-index.PNG" class="card-img-top" alt="...">
+                  <div class="div-imagen" style="background-image: url(./imgs/crud-index.PNG);">
+                    <div class="imagen-bk"> <a href="#" class="button">Galeria</a> </div>
+                    </div>
                     <div class="card-body">
                       <h5 class="card-title">CRUD PHP</h5>
                       <p class="card-text">Esto es un ejemplo de utilizacion del CRUD en PHP. <br><br><br><br> </p>
@@ -159,7 +116,9 @@
                     </div>
                 </div>
                 <div class="card mb-3 col-sm-4">
-                    <img src="./imgs/snippet.PNG" class="card-img-top" alt="...">
+                  <div class="div-imagen" style="background-image: url(./imgs/terrero.png);">
+                  <div class="imagen-bk"> <a href="#" class="button">Galeria</a> <a href="#" class="button">Sitio Web</a> </div>
+                  </div>
                     <div class="card-body">
                       <h5 class="card-title">Pagina Web Centro de salud Dr Terrero</h5>
                       <p class="card-text">Esta es la pagina del Centro de salud Dr Terrero &copy;, contiene informacion relevante sombre la empresa, servicios, horarios y mas sesiones de interes al usuario.</p>
@@ -167,7 +126,9 @@
                     </div>
                 </div>
                   <div class="card mb-3 col-sm-4">
-                    <img src="./imgs/curriculum1.png" class="card-img-top" alt="...">
+                    <div class="div-imagen" style="background-image: url(./imgs/curriculum1.png);">
+                      <div class="imagen-bk"> <a href="#" class="button">Galeria</a> </div>
+                      </div>
                     <div class="card-body">
                       <h5 class="card-title">Curriculum con HTML Y CSS</h5>
                       <p class="card-text">Esta es una asignacion de la universidad la cual me toco elaborar, usamos ciertas pautas que el profesor nos dio y luego continué con mi imaginacion, y este fue el resultado final</p>
