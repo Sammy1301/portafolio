@@ -32,4 +32,15 @@ $(document).ready(function(){
           $(".menu").slideUp(300);  
         }
       });
+
+
+      //Mostrar la imagen en grande
+      $(".galeria img").click(function() {
+        let img = $(this).attr("src");
+        $(".modal").css("display", "flex");
+        $(".modal img").attr("src", img);
+      });
+      $(".modal").click(function() {
+        $(".modal").css("display", "none");
+      });
 });

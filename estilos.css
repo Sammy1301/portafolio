@@ -34,6 +34,7 @@
     color: whitesmoke;
     transition: 0.3s;
     text-decoration: none;
+    font-size: 23px;
 }
 .navi a:hover{
     text-shadow: whitesmoke 2px 0 15px;
@@ -45,6 +46,7 @@
 }
 .menu{
     display: inline-block;
+    
 }
 #menubtn{
     display: none;
@@ -163,18 +165,56 @@ i{
 .div-imagen:hover > .imagen-bk{
     display: flex;
 }
+.proyectos::after{
+    content: "";
+    clear: both;
+    display: table;
+}
 /* #endregion */
 section{
     margin-bottom: 50px;
     padding-top: 30px;
 }
+/* #region galeria*/
+.galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 450px;
+    background-color: rgb(196, 197, 197);
+}
+.galeria img{
+    width: 350px;
+    cursor: pointer;
+}
+/* #endregion */
+
+
+/* #region modal*/
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.4);
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.modal img{
+    width: 90%;
+    height: 90%;
+}
+/* #endregion */
 
 /* #region RESPONSIVE*/
-@media only screen and (max-width: 1536px){
+@media only screen and (min-width: 1024px) and (max-width: 1532px){
     #menubtn{
         display: none;
     }
-    .menu{
+    .menu li{
         display: inline-block;
     }
 }
@@ -183,7 +223,7 @@ section{
         display: none;
         position: absolute;
         width: 100%;
-        height: 200px;
+        height: 235px;
         background-color: #191c1a;
         top: 76px;
     }
