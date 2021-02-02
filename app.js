@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    //smooth transition in navigation
-    $('a[href^="#"]').click(function() {
+  //smooth transition in navigation
+    $('a[href^="#"]').click(function smooth() {
         var destino = $(this.hash);
         if (destino.length == 0) {
           destino = $('a[name="' + this.hash.substr(1) + '"]');
@@ -33,7 +33,34 @@ $(document).ready(function(){
         }
       });
 
-
+      //mostrar galeria
+      $(".snippetsbtn").click(function() {
+        $(".galeria").hide();
+        $("#galeria-snippets").css("display", "flex");
+        $(this).attr("href", "#galeria-snippets");
+      });
+      $(".crudbtn").click(function() {
+        $(".galeria").hide();
+        $("#galeria-crud").css("display", "flex");
+        $(this).attr("href", "#galeria-crud");
+      });
+      $(".centrobtn").click(function() {
+        $(".galeria").hide();
+        $("#galeria-centro").css("display", "flex");
+        $(this).attr("href", "#galeria-centro");
+      });
+      $(".todobtn").click(function() {
+        $(".galeria").hide();
+        $("#galeria-todo").css("display", "flex");
+        $(this).attr("href", "#galeria-todo");
+      });
+      $(".terrerobtn").click(function() {
+        $(".galeria").hide();
+        $("#galeria-terrero").css("display", "flex");
+        $(this).attr("href", "#galeria-terrero");
+      });
+      $(".close").click(function(){$(".galeria").hide();});
+      
       //Mostrar la imagen en grande
       $(".galeria img").click(function() {
         let img = $(this).attr("src");

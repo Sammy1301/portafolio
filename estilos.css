@@ -177,7 +177,7 @@ section{
 }
 /* #region galeria*/
 .galeria{
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -209,6 +209,11 @@ section{
 }
 /* #endregion */
 
+
+.close{
+    position: sticky;
+    top: 0;
+}
 /* #region RESPONSIVE*/
 @media only screen and (min-width: 1024px) and (max-width: 1532px){
     #menubtn{
