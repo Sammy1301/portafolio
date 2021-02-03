@@ -32,9 +32,6 @@
 
         <!-- BANNER -->
           <div class="container-fluid principal" id="banner">
-              <div class="imagen">
-                <img src="./imgs/yo.jpg" class="rounded-circle yo" alt="IMG">
-              </div>
               <div class="texto-banner ">
                 <h1 id="nombre">Samuel Martinez</h1>
                 <h3>Jr. Web developer</h3>
@@ -53,7 +50,7 @@
                     <p><strong>Ingles:</strong> Intermedio</p>
                   </div>
                   <div class="imagen">
-                    <img src="./imgs/3964906 (1).png" alt="IMG">
+                    <img src="./imgs/3964906 (1).png" class="img-sobre-mi"alt="IMG">
                   </div>
               </div>
           </section>
@@ -94,15 +91,16 @@
           </section>
           <!-- PROYECTOS -->
           <section id="proyectos">
-            <div class="container-fluid proyectos">
-                <br>
+            <br>
                 <br>
                 <h2>Proyectos</h2>
                 <br>
+            <div class="container-fluid proyectos">
+                
            
-                <div class="card mb-3 col-sm-4">
+                <div class="card">
                   <div class="div-imagen" style="background-image: url(./imgs/snippet.PNG);">
-                    <div class="imagen-bk"> <a href=""class="button snippetsbtn">Galeria</a> <a href="https://snippetssammy.000webhostapp.com/#/inicio" target="_blank" class="button">Sitio Web</a> </div>
+                    <div class="imagen-bk"> <a href=""class="button snippetsbtn">Galeria</a> <a href="https://snippetssammy.000webhostapp.com/#/inicio" target="__blank" class="button">Sitio Web</a> </div>
                     </div>
                         <div class="card-body">
                           <h5 class="card-title">App de Snippets</h5>
@@ -111,7 +109,7 @@
                         </div>
                     </div>
 
-                    <div class="card mb-3 col-sm-4">
+                    <div class="card">
                       <div class="div-imagen" style="background-image: url(./imgs/crud-index.PNG);">
                         <div class="imagen-bk"> <a href="" class="button crudbtn">Galeria</a> </div>
                         </div>
@@ -122,18 +120,18 @@
                         </div>
                     </div>
 
-                    <div class="card mb-3 col-sm-4">
-                      <div class="div-imagen" style="background-image: url(./imgs/terrero.png);">
-                      <div class="imagen-bk"> <a href="" class="button terrerobtn">Galeria</a> <a href="#" class="button">Sitio Web</a> </div>
+                    <div class="card">
+                      <div class="div-imagen" style="background-image: url(./imgs/terrero.jpg);">
+                      <div class="imagen-bk"> <a href="" class="button terrerobtn">Galeria</a> <a href="https://centrodrterrero.000webhostapp.com/" target="__blank"class="button">Sitio Web</a> </div>
                       </div>
                         <div class="card-body">
                           <h5 class="card-title">Pagina Web Centro de salud Dr Terrero</h5>
                           <p class="card-text">Esta es la pagina del Centro de salud Dr Terrero &copy;, contiene informacion relevante sombre la empresa, servicios, horarios y mas sesiones de interes al usuario.</p>
-                          <p class="card-text"><small class="text-muted">HTML | CSS | Bootstrap</small></p>
+                          <p class="card-text"><small class="text-muted">HTML | CSS | Bootstrap | jQuery</small></p>
                         </div>
                     </div>
 
-                      <div class="card mb-3 col-sm-4">
+                      <div class="card">
                         <div class="div-imagen" style="background-image: url(./imgs/to-Do.PNG);">
                           <div class="imagen-bk"> <a href="" class="button todobtn">Galeria</a> </div>
                           </div>
@@ -175,32 +173,71 @@
           <br><br>
           <!-- Contacto -->
           <section id="contacto">
-          <div class="container">
+          <div class="container" id="app">
             <h2>Contacto</h2>
-              <form action="envio.php" method="POST">
+              <form action="envio.php" method="POST" id="contactofrm" @submit.prevent="alerta">
                   <div class="form-group">
                     <label for="name">Nombre</label>
-                    <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="name">
+                    <input type="text" class="form-control" v-model="name" placeholder="Nombre" name="nombre" id="name" required>
                   </div>
                   <div class="form-group">
                     <label for="email">Correo</label>
-                    <input type="text" class="form-control" placeholder="Correo" name="email" id="email">
+                    <input type="text" class="form-control" v-model="mail" placeholder="Correo" name="email" id="email" required>
                   </div>
                   <div class="form-group">
                     <label for="msj">Mensaje</label>
-                    <textarea class="form-control" rows="5" mane="mensaje" placeholder="Mensaje"></textarea>
+                    <textarea class="form-control" rows="5" v-model="msj" name="mensaje" placeholder="Mensaje" required></textarea>
                   </div>
                   <input type="submit" value="Enviar" class="btn btn-info">
               </form>
           </div>
           </section>
       </main>
-
-      <!-- SNIPPETS -->
-      <div class="modal">
-        <img src="" alt="IMG">
-      </div>
       
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <script>
+        const vm = new Vue({
+          el:'#app',
+          data: {
+            name:'',
+            mail:'',
+            msj:''
+          },
+          methods:{
+              alerta(){
+                const form = document.getElementById("contactofrm")
+                axios.post("http://portafoliosammy.tk/envio.php", new FormData(form))
+                .then(res =>{
+                  if (res.data == 'success') {
+                    swal.fire({
+                            title:'Hurra',
+                            text:'Mensaje Enviado',
+                            icon:'success',
+                            button:'ok'
+                        })
+                        this.name = ''
+                        this.mail = ''
+                        this.msj = ''
+                  }else{
+                    swal.fire({
+                            title:'Ups',
+                            text:'Mensaje no enviado',
+                            icon:'error',
+                            button:'ok'
+                        })
+                  }
+                })
+              }
+          },
+        })
+      </script>
+      <!-- PRESENTACION DE IMAGEN -->
+      <div class="modal">
+        <img class="presentacion" src="" alt="IMG">
+      </div>
+      <!-- sweet alert -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
       <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <!-- Popper JS -->
