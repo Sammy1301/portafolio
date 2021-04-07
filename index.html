@@ -207,7 +207,7 @@
           methods:{
               alerta(){
                 const form = document.getElementById("contactofrm")
-                axios.post("http://portafoliosammy.tk/envio.php", new FormData(form))
+                axios.post("https://sammy1301.github.io/portafolio/envio.php", new FormData(form))
                 .then(res =>{
                   if (res.data == 'success') {
                     swal.fire({
