@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+/* #region Nav Bar*/
+.navi{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: background-color 0.5s;
+    padding: 10px;
+    z-index: 99;
+}
+.navi h2{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+}
+.navi li{
+    list-style: none;
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.navi a{
+    color: whitesmoke;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 23px;
+}
+.navi a:hover{
+    text-shadow: whitesmoke 2px 0 15px;
+}
+.cont{
+    background-image: url("./imgs/fondo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.menu{
+    display: inline-block;
+    
+}
+#menubtn{
+    display: none;
+    
+}
+/* #endregion */
+
+/* #region Banner*/
+.principal{
+    height: 550px;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto-banner{
+    animation: fadeInUp;
+    animation-duration: 1s;
+    line-height: 20px;
+}
+span a{
+    font-size: xx-large;
+    color: #fff;
+    transition: text-shadow 0.3s;
+}
+span a:hover{
+    color: #fff;
+    text-shadow: #fff 0px 0px 25px;
+    animation-timing-function: ease-in;
+}
+.yo{
+    width: 150px;
+    animation: fadeInDown;
+    animation-duration: 1s;
+}
+/* #endregion */
+
+
+/* #region Quien Soy*/
+.sobre-mi{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.contenedor{
+    margin: 0 auto;
+
+}
+
+h1{
+    font-family: 'Do Hyeon', sans-serif;
+}
+.texto{
+    width: 500px;
+    font-size: large;
+}
+/* #endregion */
+
+/* #region TEGNOLOGIAS*/
+i{
+    font-size: xx-large;
+}
+/* #endregion */
+
+
+/* #region PROYECTOS*/
+.proyectos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    float: left;
+    height: 500px;
+    background-color: #cfcfcf;
+    padding-top: 5px;
+    margin: 2px;
+    width: 460px;
+    gap: 5px;
+    overflow-y: auto;
+}
+.card-img-top{
+    cursor: pointer;
+}
+.div-imagen{
+    position:relative; 
+    height:30px; 
+    height: 210px; 
+    background-size: cover;
+    
+}
+
+.imagen-bk{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0.5;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.button{
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+    border: solid 2px #fff;
+    background: transparent;
+    color: #fff;
+    transition: 0.5s;
+}
+.button:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: blue;
+
+}
+.div-imagen:hover > .imagen-bk{
+    display: flex;
+}
+.proyectos::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+/* #endregion */
+section{
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+/* #region galeria*/
+.galeria{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 450px;
+    background-color: rgb(196, 197, 197);
+}
+.galeria img{
+    width: 350px;
+    cursor: pointer;
+}
+/* #endregion */
+
+
+/* #region modal*/
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.4);
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.modal img{
+    width: 90%;
+    height: 90%;
+}
+/* #endregion */
+
+
+.close{
+    position: sticky;
+    top: 0;
+}
+/* #region RESPONSIVE*/
+@media only screen and (min-width: 1440px) and (max-width: 1532px){
+    #menubtn{
+        display: none;
+    }
+    .menu li{
+        display: inline-block;
+    }
+    .menu{ display: inline-block;}
+    .card{width: 450px;} 
+}
+@media only screen and (max-width:1024px){
+    .card{width: 400px;}
+}
+@media only screen and (max-width: 768px){
+    .menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 235px;
+        background-color: #191c1a;
+        top: 76px;
+    }
+    .menu li{
+        display: block;
+    }
+    #menubtn{
+        display: inline;
+    }
+    div.card{
+        max-width: 350px;
+    }
+    .imagen-bk{display:flex;}
+    .galeria{
+        overflow-y: auto;
+    }
+    .modal{
+        width: 100%;
+        height: 55%;
+        margin-top: 30%;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 426px){
+    .menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 235px;
+        background-color: #191c1a;
+        top: 76px;
+    }
+    .menu li{
+        display: block;
+    }
+    
+    #menubtn{
+        display: inline;
+    }
+    div.card{
+        width: 95%;
+    }
+    
+    .img-sobre-mi{
+        width: 350px;
+    }
+    p{font-size: small;}
+    .imagen-bk{display: flex;}
+    .modal{
+        width: 100%;
+        height: 35%;
+        margin-top: 30%;
+    }
+    .galeria{
+        height: 600px;
+        overflow-y: scroll;
+    }
+    
+}
+@media only screen and (max-width:320px){
+    .menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 235px;
+        background-color: #191c1a;
+        top: 76px;
+    }
+    .menu li{
+        display: block;
+    }
+    
+    #menubtn{
+        display: inline;
+    }
+    div.card{
+        width: 90%;
+    }
+    
+    .img-sobre-mi{
+        width: 310px;
+    }
+    p{font-size: small;}
+    .imagen-bk{display: flex;}
+    .modal{
+        width: 100%;
+        height: 35%;
+        margin-top: 30%;
+    }
+    .galeria{
+        height: 600px;
+        overflow-y: scroll;
+    }
+}
+/* #endregion */
